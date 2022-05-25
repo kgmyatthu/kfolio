@@ -1,0 +1,60 @@
+.root{
+  width:100%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  align-content:center;
+  background-color: black;
+}
+.container{
+  width:80%;
+  margin:auto; 
+  display:flex;
+  flex-direction: row;
+  height:100vh; 
+  align-items: center;
+  gap:2.8rem;
+}
+
+.child{
+  width:33.33%;
+  color:white;
+  font-family: nowBold;
+}
+
+.col-1st{
+  padding:1rem;
+}
+.name{
+  text-align: right;
+  letter-spacing: 0.1em;
+  font-size:4rem;
+}
+.col-2st{
+  box-shadow: 2.5rem 2.5rem white;
+  padding:0;
+  width:27%;
+}
+.pp-img{
+}
+.col-3st{
+  margin-top:-25rem;
+  font-size:1.2rem;
+  padding:1rem;
+  letter-spacing: 0.2em;
+}
+
+.btn{
+  font-size: 1.2rem !important;
+}
+
+.date{
+  position:absolute;
+  font-size:0.8rem !important;
+  color:white;
+  bottom:100px;
+  transform: rotate(90deg);
+  transform: 0 100;
+  font-family: anonymousPro;
+  font-size: 1rem;
+}

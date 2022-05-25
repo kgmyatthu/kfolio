@@ -1,0 +1,18 @@
+.shadow-btn{
+  letter-spacing: normal;
+  font-size:1rem;
+  font-family: spacemonoBold;
+  background-color:white;
+  color:black;
+  border:1px solid white;
+  display: inline-block;
+  padding:1rem;
+  box-shadow: 0.8rem 0.8rem #0300b3;
+  cursor: pointer;
+}
+
+.shadow-btn:hover{
+  background-color:black;
+  color:white;
+  box-shadow: 0.8rem 0.8rem white;
+}
