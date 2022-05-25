@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from './intro.module.css';
 import Image from "next/image";
-import profileImg from '../../assets/img/profile.jpeg';
+import profileImg from '../../assets/img/profile.png';
 import { classNameHelper as css } from "../../utils/utils";
 import ShadowButton from "../buttons/shadowButton.component";
 import { useRef } from "react";
