@@ -10,3 +10,8 @@ export const classNameHelper = (cssFileObj: Style, classNames: string): string =
   })
   return mapped.join(' ')
 }
+
+
+export const imgLoader = ({src}: {src: any}) => {
+  return `${src}`
+}

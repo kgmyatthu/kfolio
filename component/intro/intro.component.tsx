@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import styles from './intro.module.css';
 import Image from "next/image";
 import profileImg from '../../assets/img/profile.png';
-import { classNameHelper as css } from "../../utils/utils";
+import { classNameHelper as css, imgLoader } from "../../utils/utils";
 import ShadowButton from "../buttons/shadowButton.component";
 import { useRef } from "react";
 
@@ -20,7 +20,7 @@ const Intro: NextPage = () => {
           </div>
         </div>  
         <div className={css(styles,"child col-2st")}>
-          <Image src={profileImg} alt="profile" layout="responsive" className={styles['pp-img']}/>
+          <Image loader={imgLoader} src={profileImg} alt="profile" layout="responsive" className={styles['pp-img']}/>
         </div>  
         <div className={css(styles,"child col-3st")}>
           <div>SOFTWARE<br/>
