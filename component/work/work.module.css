@@ -1,0 +1,44 @@
+.container{
+  background-color:black;
+  min-height:100vh;
+  display:flex;
+  margin:auto;
+  align-items: center;
+  direction: row;
+  width:100%;
+}
+.child{
+  width:50%;
+  color:white;
+}
+
+.col-1st{
+  text-align:center;
+}
+.col-1st > h1{
+  padding:0.5rem;
+  font-family: nowBlack;
+  font-size:3.8rem;
+  letter-spacing: 0.1em;
+}
+
+.col-2nd{
+}
+.timeline{
+  width:70%;
+  margin:auto;
+}
+
+@media (max-width: 575.98px) { 
+  
+  .container{
+    flex-direction:column;
+  }
+  .child{
+    width:100%;
+  }
+  .col-1st > h1{
+    font-size:2.8rem;
+  }
+}
+

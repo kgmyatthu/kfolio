@@ -1,13 +1,6 @@
-.root{
-  width:100%;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  align-content:center;
-  background-color: black;
-}
 .container{
-  width:80%;
+  background-color: black;
+  width:100%;
   margin:auto; 
   display:flex;
   flex-direction: row;
@@ -19,7 +12,7 @@
 .child{
   width:33.33%;
   color:white;
-  font-family: nowBold;
+  font-family: nowBlack;
 }
 
 .col-1st{
@@ -28,22 +21,26 @@
 .name{
   text-align: right;
   letter-spacing: 0.1em;
-  font-size:4rem;
+  font-size:3.8rem;
 }
-.col-2st{
+.col-2nd{
   box-shadow: 2.5rem 2.5rem white;
   padding:0;
-  width:27%;
+  width:23%;
 }
-.pp-img{
-}
-.col-3st{
+.col-3rd{
   margin-top:-25rem;
   font-size:1.2rem;
   padding:1rem;
   letter-spacing: 0.2em;
 }
 
+.secondary-title{
+  display:none;
+  font-size:1.2rem;
+  padding:1rem;
+  letter-spacing: 0.2em;
+}
 .btn{
   font-size: 1.2rem !important;
 }
@@ -57,4 +54,43 @@
   transform: 0 100;
   font-family: anonymousPro;
   font-size: 1rem;
+}
+
+@media (max-width: 991.98px) {  
+  .container{
+    height:100vh;
+    gap:0;
+    flex-direction: column;
+    background-image: url('/profile.png');
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
+  }
+  .secondary-title{
+    padding:0;
+    display:block;
+  }
+  .child{
+    height:auto;
+    margin:auto;
+    width:100%;
+  }
+  .col-1st{
+    padding-right:2rem;
+  }
+  .col-2nd, .col-3rd{
+    display:none;
+  }
+  .btn{
+    margin-right:10px;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .container{
+    background:black;
+  }
+  /* .col-1st{ */
+  /*   background-color: black; */
+  /*   margin-bottom: 0; */
+  /* } */
 }

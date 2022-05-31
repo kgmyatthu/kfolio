@@ -8,27 +8,34 @@ import { useRef } from "react";
 
 const Intro: NextPage = () => {
   return (
-    <div className={styles.root}>
       <div className={css(styles, "container")}>
         <div className={css(styles,"child col-1st")}>
           <div className={styles.name}>
             <div>KAUNG<br/><span style={{color:'#8c52ff'}}>MYAT</span><br/>THU</div>
+            <div className={styles['secondary-title']}>SOFTWARE<br/>
+              <span style={{color:'#5ce1e6'}}>ENGINEER</span>
+            </div>
             <ShadowButton
               content="Let's connect"
               action=""
               className={styles['btn']}/>
           </div>
         </div>  
-        <div className={css(styles,"child col-2st")}>
-          <Image loader={imgLoader} src={profileImg} alt="profile" layout="responsive" className={styles['pp-img']}/>
+        <div className={css(styles,"child col-2nd")}>
+          <Image 
+            unoptimized={true}
+            loader={imgLoader} 
+            src={profileImg} 
+            alt="profile" 
+            layout="responsive" 
+            className={styles['pp-img']}/>
         </div>  
-        <div className={css(styles,"child col-3st")}>
+        <div className={css(styles,"child col-3rd")}>
           <div>SOFTWARE<br/>
             <span style={{color:'#5ce1e6'}}>ENGINEER</span>
           </div>
         </div>  
       </div>
-    </div>
   )
 }
 

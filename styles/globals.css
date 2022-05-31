@@ -15,9 +15,24 @@ a {
   box-sizing: border-box;
 }
 
+:root{
+  --color-cyan:#5ce1e6;
+}
+@font-face {
+  font-family: nowBlack;
+  src: url('../assets/fonts/now.black.otf');
+}
 @font-face {
   font-family: nowBold;
   src: url('../assets/fonts/now.bold.otf');
+}
+@font-face {
+  font-family: now;
+  src: url('../assets/fonts/now.regular.otf');
+}
+@font-face {
+  font-family: spacemono;
+  src: url('../assets/fonts/SpaceMono-Regular.ttf');
 }
 @font-face {
   font-family: spacemonoBold;
@@ -26,6 +41,10 @@ a {
 @font-face {
   font-family: anonymousPro;
   src: url('../assets/fonts/AnonymousPro-Regular.ttf');
+}
+@font-face {
+  font-family: anonymousProBold;
+  src: url('../assets/fonts/AnonymousPro-Bold.ttf');
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
