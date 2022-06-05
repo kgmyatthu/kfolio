@@ -4,10 +4,18 @@ import { useEffect, useRef, useState } from "react";
 import { classNameHelper as css } from "../../utils/utils";
 import styles from './timeline.module.css';
 
+type Jobs = {
+  year: number
+  month: string
+  company: string
+  position: string
+  description: string
+}
 type TimelineProps = {
   className?: string
+  data: Jobs[]
 }
-const Timeline: NextPage<TimelineProps> = ({className}) => {
+const Timeline: NextPage<TimelineProps> = ({className, data}) => {
   const lineEl = useRef() as React.MutableRefObject<HTMLInputElement>;
   const [origin, setOrigin ] = useState<{x: number, y:number}>({x: 0, y: 0}) 
   const [target, setTarget ] = useState<{x: number, y:number}>({x: 0, y: 0})
@@ -21,29 +29,40 @@ const Timeline: NextPage<TimelineProps> = ({className}) => {
   return (
     <div className={className? className: ''}>
       <div className={styles.line} ref={lineEl}></div>
-      <Timeframe
-        year={2020}
-        month='feb'
-        company='shardus'
-        position='software engineer'
-        description='Dynamically state shard-ed blockchain protocol allowing true linear scalability for decentralized web'
-        state={{get:origin, set:setOrigin}}
-      />
-      <Timeframe
-        year={2020}
-        month='feb'
-        company='shardus'
-        position='software engineer'
-        description='Dynamically state shard-ed blockchain protocol allowing true linear scalability for decentralized web'
-      />
-      <Timeframe
-        year={2020}
-        month='feb'
-        company='shardus'
-        position='software engineer'
-        description='Dynamically state shard-ed blockchain protocol allowing true linear scalability for decentralized web'
-        state={{get:target, set:setTarget}}
-      />
+      {
+        data.map((t,i,a) =>{
+          if ( i === 0 ){
+            return <Timeframe
+              key={i}
+              year={t.year}
+              month={t.month}
+              company={t.company}
+              position={t.position}
+              description={t.description}
+              state={{get:origin, set:setOrigin}}
+            />
+          }
+          if ( i === a.length - 1 ) {
+            return <Timeframe
+              key={i}
+              year={t.year}
+              month={t.month}
+              company={t.company}
+              position={t.position}
+              description={t.description}
+              state={{get:target, set:setTarget}}
+            />
+          }
+          return <Timeframe
+                    key={i}
+                    year={t.year}
+                    month={t.month}
+                    company={t.company}
+                    position={t.position}
+                    description={t.description}
+                />
+        } )
+      }
     </div>
   )
 }
