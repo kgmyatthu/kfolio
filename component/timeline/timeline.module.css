@@ -16,7 +16,15 @@
 }
 
 .timeframe-data{
+  cursor: pointer;
+  border:2px solid black;
+  padding:1rem;
   text-align:left;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.timeframe-data:hover{
+  border-color:white;
+  box-shadow: 23px 23px white;
 }
 .timeframe-data > h2 {
   letter-spacing: 0.1rem;
@@ -38,6 +46,7 @@
   margin:0;
 }
 .timeframe-date{
+  padding:1rem;
   color:white;
   text-align:center;
 }
@@ -58,7 +67,7 @@
 }
 
 .line{
-  width:300px;
+  width:1px;
   height:300px;
   position:fixed; 
   border-left: 2px solid grey;

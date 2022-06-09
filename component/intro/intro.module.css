@@ -27,6 +27,12 @@
   box-shadow: 2.5rem 2.5rem white;
   padding:0;
   width:23%;
+  filter: grayscale(100%);
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+.col-2nd:hover{
+  /* filter: grayscale(0%); */
+  box-shadow: 1.5rem 1.5rem white;
 }
 .col-3rd{
   margin-top:-25rem;
@@ -54,6 +60,9 @@
   transform: 0 100;
   font-family: anonymousPro;
   font-size: 1rem;
+}
+
+.pp-img{
 }
 
 @media (max-width: 991.98px) {  

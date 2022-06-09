@@ -17,6 +17,7 @@ a {
 
 :root{
   --color-cyan:#5ce1e6;
+  --color-blue:#0030b3;
 }
 @font-face {
   font-family: nowBlack;

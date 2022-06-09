@@ -22,14 +22,72 @@
   letter-spacing: 0.1em;
 }
 
-.col-2nd{
-}
 .timeline{
   width:70%;
   margin:auto;
 }
 
-@media (max-width: 575.98px) { 
+.col-2nd{
+  padding:1rem;
+  flex-direction: column;
+  letter-spacing: 0.5em;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  color:white;
+  /* background: var(--color-blue); */
+  /* box-shadow: -25px 25px var(--color-cyan); */
+}
+.col-2nd > h1{
+  cursor: pointer;
+}
+
+.gif{    
+  cursor: pointer;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.gif:hover, .col-2nd>h1:hover{
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {opacity: 100%;}
+  10% {opacity:  75%;}
+  20% {opacity:  50%;}
+  30% {opacity:  50%;}
+  40% {opacity:  25%;}
+  50% {opacity:  10%;}
+  60% {opacity:  10%;}
+  70% {opacity:  50%;}
+  80% {opacity:  50%;}
+  85% {opacity:  75%;}
+  90% {opacity:  100%;}
+  100% {opacity: 100%;}
+}
+
+@keyframes float {
+  0%   {margin-left: 10px;}
+  10%  {margin-left:  20px;}
+  20%  {margin-left:  50px;}
+  30%  {margin-left:  50px;}
+  40%  {margin-left:  25px;}
+  50%  {margin-left:  0px;}
+  60%  {margin-left:  10px;}
+  70%  {margin-left:  50px;}
+  80%  {margin-left:  50px;}
+  90%  {margin-left:  75px;}
+  99%  {margin-left:  75px;}
+  100% {margin-left: 100px;}
+}
+
+
+@media (max-width: 991.98px) {  
   
   .container{
     flex-direction:column;
@@ -41,4 +99,5 @@
     font-size:2.8rem;
   }
 }
+
 

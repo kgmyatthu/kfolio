@@ -4,16 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { classNameHelper as css } from "../../utils/utils";
 import styles from './timeline.module.css';
 
-type Jobs = {
-  year: number
-  month: string
-  company: string
-  position: string
-  description: string
-}
 type TimelineProps = {
   className?: string
-  data: Jobs[]
+  data: TimeframeProps[]
 }
 const Timeline: NextPage<TimelineProps> = ({className, data}) => {
   const lineEl = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -39,6 +32,7 @@ const Timeline: NextPage<TimelineProps> = ({className, data}) => {
               company={t.company}
               position={t.position}
               description={t.description}
+              link={t.link}
               state={{get:origin, set:setOrigin}}
             />
           }
@@ -50,6 +44,7 @@ const Timeline: NextPage<TimelineProps> = ({className, data}) => {
               company={t.company}
               position={t.position}
               description={t.description}
+              link={t.link}
               state={{get:target, set:setTarget}}
             />
           }
@@ -59,6 +54,7 @@ const Timeline: NextPage<TimelineProps> = ({className, data}) => {
                     month={t.month}
                     company={t.company}
                     position={t.position}
+                    link={t.link}
                     description={t.description}
                 />
         } )
@@ -73,9 +69,10 @@ type TimeframeProps = {
   company: string
   position: string
   description: string
+  link: string
   state?: any
 }
-const Timeframe: NextPage<TimeframeProps> = ({year, month, company, position, description, state}) => {
+const Timeframe: NextPage<TimeframeProps> = ({year, month, company, position, description, state, link}) => {
   
   const dateEl = useRef() as React.MutableRefObject<HTMLInputElement>;
   const companyEl = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -113,7 +110,7 @@ const Timeframe: NextPage<TimeframeProps> = ({year, month, company, position, de
   },[])
 
   return (
-    <div className={styles['timeframe']}>
+    <a className={styles['timeframe']} href={link}>
       <div className={styles['timeframe-date']}>
         <span ref={dateEl}>{year}</span> 
         <br/>
@@ -127,7 +124,7 @@ const Timeframe: NextPage<TimeframeProps> = ({year, month, company, position, de
         </p>
       </div>
       <div ref={dotEl} className={styles.dot}></div>
-    </div>
+    </a>
   )
 }
 export default Timeline

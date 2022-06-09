@@ -9,10 +9,11 @@
   padding:1rem;
   box-shadow: 0.8rem 0.8rem #0300b3;
   cursor: pointer;
+  transition: box-shadow 0.1s, color 0.1s, background-color 0.1s;
 }
 
 .shadow-btn:hover{
   background-color:black;
   color:white;
-  box-shadow: 0.8rem 0.8rem white;
+  box-shadow: 0.5rem 0.5rem white;
 }
