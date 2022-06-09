@@ -53,6 +53,9 @@ jobs:
         name: production-files
         path: ./.
 
+    - name: Create CNAME for domain
+      run: echo "v2.kaungmyatthu.dev" > CNAME
+
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
