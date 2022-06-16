@@ -1,0 +1,48 @@
+.container{
+    color:white;
+    background-color:var(--color-bg);
+    display: flex;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+
+
+
+.child{
+    font-family: spacemono;
+}
+
+.col-1st{
+    
+    width:25%;
+}
+.col-2nd{
+    width:40%;
+}
+.col-3rd{
+    width:25%;
+}
+.col-2nd blockquote{
+    border-left: 2px solid white;
+    padding:0.1em;
+    padding-left:1em;
+    background-color: #121212;
+}
+.col-2nd h1{
+    padding:1em 0em 1em 0em;
+    border-bottom:1px solid rgba(255,255,255,.2); 
+}
+
+.col-2nd table, .col-2nd th, .col-2nd td{
+    border:1px solid grey;
+    padding:0.5em;
+    border-collapse: collapse;
+}
+.col-2nd [class*="math"]{
+    font-size:1.3em;
+}
+.col-2nd [class*="icon-link"]{
+    padding-right:0.3em;
+    color:var(--color-cyan);
+}

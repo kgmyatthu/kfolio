@@ -28,6 +28,15 @@ jobs:
     - name: Run tests
       run: npm run test
 
+    - name: Prisma Generate
+      run: npm run db:generate
+
+    - name: Prisma push
+      run: npm run db:push
+
+    - name: Populate the db 
+      run: npm run db:populate
+
     - name: Build project
       run: npm run build
 

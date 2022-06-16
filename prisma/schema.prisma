@@ -1,0 +1,24 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:main.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Article {
+  id   Int              @id @default(autoincrement())
+  path String           @unique
+  date DateTime
+  slug String           @unique
+  body String
+  tags Tag[]
+}
+
+model Tag {
+  id       Int              @id @default(autoincrement())
+  name     String           @unique
+  articles Article[]
+}
+
