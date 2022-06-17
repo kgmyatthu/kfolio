@@ -6,8 +6,8 @@ import parseHeadingAST from '../../utils/parseHeadingAST'
 import parseHeadingText, {
   Heading as HeadingType,
 } from '../../utils/parseHeadingText'
-import { ImMenu } from 'react-icons/im'
 import styles from './toc.module.css'
+import { AiOutlineMenuUnfold } from 'react-icons/ai'
 
 interface TOCProps {
   markdown: string
@@ -52,9 +52,9 @@ const TOC: React.FC<TOCProps> = ({
   }, [parsedHeadingList])
 
   return (
-    <>
+    <div>
         <div className={styles['toc-label']}> 
-            <ImMenu/> 
+            <AiOutlineMenuUnfold/>
             <span>Table of contents</span>
         </div>
         <Heading
@@ -67,7 +67,7 @@ const TOC: React.FC<TOCProps> = ({
           activeAnchorClassName={activeAnchorClassName}
           activeHeading={activeHeading}
         />
-    </>
+    </div>
   )
 }
 

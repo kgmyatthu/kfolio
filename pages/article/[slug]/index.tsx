@@ -14,12 +14,12 @@ import { classNameHelper as css } from '../../../utils/utils';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { useEffect } from 'react';
-import { AiOutlineLink } from 'react-icons/ai';
+import { AiFillGithub, AiOutlineHome, AiOutlineLink} from 'react-icons/ai';
+import { RiArticleLine } from 'react-icons/ri';
 import ReactDOMServer from 'react-dom/server';
-import pickHeadingFromAST from '../../../utils/pickHeadingFromAst';
-import markdownToAST from '../../../utils/markdownToAst';
-import parseHeadingAST from '../../../utils/parseHeadingAST';
 import TOC from '../../../component/toc/toc.compoment';
+import Tag from '../../../component/tag/tag.component';
+import Link from 'next/link';
 
 const Article: NextPage<any> = ({slug, title, body, date, tags}) => {
   useEffect(() => {
@@ -34,9 +34,21 @@ const Article: NextPage<any> = ({slug, title, body, date, tags}) => {
   return (
     <div className={styles['container']}>
       <div className={css(styles, 'child col-1st')}>
+
+       <div> <Link href="/"><AiOutlineHome/></Link>        </div> 
+       <div> <Link href="/article"><RiArticleLine/></Link> </div> 
+       <div> <Link href="https://github.com/kgmyatthu"><AiFillGithub/></Link>  </div> 
       </div>
       <div className={css(styles, 'child col-2nd')}>
+        <Tag tags={tags}/>
+        <br/>
+        <div className={styles['article-meta']}>  
+          {new Date(date)
+            .toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) } 
+          | {readingTime(body).text}
+        </div>
         <ReactMarkdown 
+          className={styles.body}
           remarkPlugins={[remarkGfm, remarkMath, remarkHeadingGap]}
           rehypePlugins={[
             [rehypePrism, {showLineNumbers: true}], 
@@ -51,10 +63,7 @@ const Article: NextPage<any> = ({slug, title, body, date, tags}) => {
         <TOC
           markdown={body}
           hyperlink={true}
-          onChangeHeading={(headingList) => {
-            console.log(headingList)
-          }}
-          liClassName="li"
+          liClassName={styles["toc-li"]}
           activeAnchorClassName="activeAnchor"
         />
       </div>

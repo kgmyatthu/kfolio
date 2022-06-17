@@ -1,6 +1,6 @@
 ---
 title: "what the fuck"
-tags: ['cryptography', 'algorithm', 'math']
+tags: ['cryptography', 'algorithm', 'math', 'linear-algebra', 'games']
 date: "2021-05-13"
 ---
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
