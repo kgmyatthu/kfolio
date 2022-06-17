@@ -35,4 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 
 # db
-./prisma/main.db
+prisma/main.db
