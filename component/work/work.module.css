@@ -87,6 +87,12 @@
 }
 
 
+@media (max-width: 767.98px) { 
+  .timeline{
+    width:100%;
+  }
+}
+
 @media (max-width: 991.98px) {  
   
   .container{

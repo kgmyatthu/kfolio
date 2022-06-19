@@ -1,5 +1,6 @@
 html,
 body {
+  background-color: black;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -21,6 +22,7 @@ a {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --color-cyan:#5ce1e6;
   --color-blue:#0030b3;
+  --color-purple:#8c52ff;
   --color-bg:black;
 }
 @font-face {

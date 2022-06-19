@@ -35,7 +35,7 @@ const Work: NextPage = () => {
 
   ])
   return (
-    <div className={styles['container']}>
+    <div id='work' className={styles['container']}>
       <div className={css(styles, 'child col-1st')}>
         <h1>
           <span style={{color:'#8c52ff'}}>

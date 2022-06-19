@@ -1,0 +1,92 @@
+.container{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    min-height:100vh;
+}
+
+.child{
+    /* border-top:3px dotted var(--color-cyan); */
+    /* border-left:3px dotted var(--color-cyan); */
+    /* border-right:3px solid var(--color-cyan); */
+    /* border-bottom:3px solid var(--color-cyan); */
+    border:2px solid rgba(255,255,255,0.2);
+    box-shadow:20px 20px white;
+    padding:3em;
+    width:45%;
+    font-family:spacemono;
+    margin:auto;
+    transition: box-shadow 0.2s;
+}
+.child:hover {
+    box-shadow:15px 15px var(--color-cyan);
+}
+.child > span{
+    animation: discotext 0.6s infinite;
+    text-shadow:5px 5px var(--color-blue);
+    color:var(--color-cyan);
+    font-size:10em;
+    padding:0rem;
+    margin:0rem;
+}
+
+@keyframes discotext {
+    0%{
+        color:var(--color-cyan);
+        text-shadow:5px 5px var(--color-blue);
+    }
+    20%{
+        color:var(--color-blue);
+        text-shadow:5px 5px white;
+    }
+    40%{
+        color:var(--color-purple);
+        text-shadow:5px 5px var(--color-cyan);
+    }
+    70%{
+        color:var(--color-blue);
+        text-shadow:5px 5px var(--color-purple);
+    }
+    80%{
+        color:var(--color-cyan);
+        text-shadow:5px 5px var(--color-blue);
+    }
+    100%{
+        color:var(--color-cyan);
+        text-shadow:5px 5px var(--color-blue);
+    }
+  
+}
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .child{
+        border:none;
+        box-shadow:none;
+        padding:1em;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {  }
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+    .child{
+        width:90%;
+    }
+    .child:hover{
+        box-shadow:none;
+    }
+}
+
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {  }
+

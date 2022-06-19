@@ -16,13 +16,13 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { useEffect } from 'react';
 import { AiFillGithub, AiOutlineHome, AiOutlineLink} from 'react-icons/ai';
 import { RiArticleLine } from 'react-icons/ri';
+import { BiShare } from 'react-icons/bi';
 import ReactDOMServer from 'react-dom/server';
 import TOC from '../../../component/toc/toc.compoment';
 import Tag from '../../../component/tag/tag.component';
 import Link from 'next/link';
 
-const Article: NextPage<any> = ({slug, title, body, date, tags}) => {
-  useEffect(() => {
+const Article: NextPage<any> = ({slug, title, body, date, tags}) => { useEffect(() => {
     console.log(tags)
     const els = Array.from(
       document.getElementsByClassName('icon-link')
@@ -38,6 +38,7 @@ const Article: NextPage<any> = ({slug, title, body, date, tags}) => {
        <div> <Link href="/"><AiOutlineHome/></Link>        </div> 
        <div> <Link href="/article"><RiArticleLine/></Link> </div> 
        <div> <Link href="https://github.com/kgmyatthu"><AiFillGithub/></Link>  </div> 
+       <div> <Link href="https://github.com/kgmyatthu"><BiShare/></Link>  </div> 
       </div>
       <div className={css(styles, 'child col-2nd')}>
         <Tag tags={tags}/>
