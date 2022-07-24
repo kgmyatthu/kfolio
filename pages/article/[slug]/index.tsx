@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import fs from 'fs';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import { Article, PrismaClient } from '@prisma/client';
+import { Article } from '@prisma/client';
 import remarkGfm from 'remark-gfm';
 import rehypePrism from 'rehype-prism-plus';
 import remarkMath from 'remark-math';
@@ -21,6 +21,7 @@ import ReactDOMServer from 'react-dom/server';
 import TOC from '../../../component/toc/toc.compoment';
 import Tag from '../../../component/tag/tag.component';
 import Link from 'next/link';
+import db from '../../../storage';
 
 const Article: NextPage<any> = ({slug, title, body, date, tags}) => { useEffect(() => {
     console.log(tags)
@@ -77,10 +78,9 @@ export default dynamic(() => Promise.resolve(Article), {
 })
 
 
-const prisma = new PrismaClient()
 export async function getStaticPaths(){
 
-  const articles = await prisma.article.findMany();
+  const articles = await db.article.findMany();
 
   const paths = articles.map( (article: Article) => {
     const { slug } = article
@@ -98,7 +98,7 @@ export async function getStaticPaths(){
 export async function getStaticProps({ params: { slug } }: any) {
   // const fileName = fs.readFileSync(`articles/${slug.replace(/-/g,'_')}.md`, 'utf-8');
   // const { data: frontmatter, content } = matter(fileName);
-  const article = await prisma.article.findUnique({
+  const article = await db.article.findUnique({
     where: { slug: slug },
     include: { tags: true }
   }) 

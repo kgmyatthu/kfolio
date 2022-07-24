@@ -13,7 +13,6 @@ const About: NextPage = () => {
             <div>
                 My name is Kaung Myatthu, (pronunced kow matthew). 
                 I'm a software engineer, specifically build things for web. 
-                I grew up with both parents and had a decent childhood, 
                 I went to college to study computer science for three years and dropped out of it due to the political situation here in Myanmar. 
                 Now I'm in a team building a truly scalable decentralized technology protocol for the web. 
                 I like writing technical articles, playing video games and music in my spare time.

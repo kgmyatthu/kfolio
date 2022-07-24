@@ -35,11 +35,14 @@
   align-items:center;
   display:flex;
   color:white;
-  /* background: var(--color-blue); */
+  background: var(--color-blue);
   /* box-shadow: -25px 25px var(--color-cyan); */
+  border-radius: 500px 0px 0px 500px;
+  min-height:80vh;
 }
 .col-2nd > h1{
   cursor: pointer;
+  font-family:1em;
 }
 
 .gif{    

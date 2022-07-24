@@ -79,16 +79,25 @@ const Timeframe: NextPage<TimeframeProps> = ({year, month, company, position, de
   const dotEl = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   function getPos(element: typeof dateEl.current) {
-    const pos = element.getBoundingClientRect();
+    try{
+      const pos = element.getBoundingClientRect();
+      return {
+        x: pos.x,
+        y: pos.y
+      };
+    }catch(e){
+      console.log(e)
+    }
     // console.log(pos);
     return {
-      x: pos.x,
-      y: pos.y
-    };
+      x: 0,
+      y: 0
+    }
   }
   useEffect(()=>{
+    let animationFrame: number;
     const draw = () => {
-      requestAnimationFrame(draw);     
+      animationFrame = requestAnimationFrame(draw);     
       const j = getPos(dateEl.current)
       const k = getPos(companyEl.current)
   
@@ -103,9 +112,11 @@ const Timeframe: NextPage<TimeframeProps> = ({year, month, company, position, de
       // console.log(left)
     }
   
-    draw();
+    animationFrame = requestAnimationFrame(draw); 
 
     return (()=>{
+      // if we don't cancel animation loop on component dismount, the whole site could break
+      cancelAnimationFrame(animationFrame);
     })
   },[])
 
