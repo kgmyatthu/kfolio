@@ -11,7 +11,7 @@ import Nav from '../component/nav/nav.component'
 import Work from '../component/work/work.component'
 import db from '../storage'
 import styles from './index.module.css'
-import RecentArticles from '../component/article/recentArticle.component';
+import RecentArticles from '../component/article/recentArticles.component';
 
 const Home: NextPage<any> = ({recentArticles}) => {
   return (
@@ -40,7 +40,7 @@ export default dynamic(() => Promise.resolve(Home), {
 
 export async function getStaticProps() {
     let articles = await db.article.findMany();
-    articles = articles.slice(-3);
+    articles = articles.slice(-4);
 
 
     const recentArticles = []

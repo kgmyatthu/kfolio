@@ -12,8 +12,8 @@
     /* border-left:3px dotted var(--color-cyan); */
     /* border-right:3px solid var(--color-cyan); */
     /* border-bottom:3px solid var(--color-cyan); */
-    border:2px solid rgba(255,255,255,0.2);
-    box-shadow:20px 20px white;
+    /* border:2px solid rgba(255,255,255,0.2); */
+    /* box-shadow:20px 20px white; */
     padding:3em;
     width:45%;
     font-family:spacemono;
@@ -21,7 +21,7 @@
     transition: box-shadow 0.2s;
 }
 .child:hover {
-    box-shadow:15px 15px var(--color-cyan);
+    /* box-shadow:15px 15px var(--color-cyan); */
 }
 .child > span{
     animation: discotext 0.6s infinite;

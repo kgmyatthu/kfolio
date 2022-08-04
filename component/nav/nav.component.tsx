@@ -24,7 +24,7 @@ const Nav: NextPage<any> = ({children}) => {
             </div>
             <div className={styles.link}><Link href="/#work">WORK</Link> </div>
             <div className={styles.link}><Link href="/#about">ABOUT</Link> </div>
-            <div className={styles.link}><Link href="/article">Article</Link> </div>
+            <div className={styles.link}><Link href="/article">ARTICLES</Link> </div>
         </div>
     </div>
   )

@@ -1,6 +1,8 @@
 .container{
     padding:1em;
     margin:auto;
+    margin-bottom:1em;
+    margin-top:1em;
     width:500px;
     display:inline-block;
     background-color: var(--color-blue);
