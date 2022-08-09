@@ -1,6 +1,4 @@
-
-import WAVES from 'vanta/dist/vanta.waves.min';
-import CELLS from 'vanta/dist/vanta.cells.min';
+// @ts-ignore
 import BIRDS from 'vanta/dist/vanta.birds.min';
 import type { NextPage } from "next";
 import styles from './contact.module.css';
@@ -8,11 +6,9 @@ import { classNameHelper as css} from "../../utils/utils";
 import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { useEffect, useRef, useState } from 'react';
 import React from 'react';
-import dynamic from 'next/dynamic';
 import * as THREE from "three";
 
 
-const p5 = dynamic(() =>{ return  import('p5')}, {ssr: false}) 
 const Contact: NextPage = () => {
 
 
@@ -25,7 +21,6 @@ const Contact: NextPage = () => {
       setVantaEffect(BIRDS({
         el: contactRef.current,
         THREE: THREE,
-        p5: p5,
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
