@@ -22,10 +22,12 @@
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
+    "p5": "^1.1.9",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
+    "react-p5": "^1.3.30",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-mathjax": "^4.0.2",
@@ -34,7 +36,9 @@
     "remark-gfm": "^3.0.1",
     "remark-heading-gap": "^5.0.1",
     "remark-math": "^5.1.1",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "three": "^0.121.0",
+    "vanta": "^0.5.22"
   },
   "devDependencies": {
     "@types/node": "17.0.42",

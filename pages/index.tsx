@@ -12,6 +12,7 @@ import Work from '../component/work/work.component'
 import db from '../storage'
 import styles from './index.module.css'
 import RecentArticles from '../component/article/recentArticles.component';
+import Contact from '../component/contact/contact.component';
 
 const Home: NextPage<any> = ({recentArticles}) => {
   return (
@@ -25,7 +26,7 @@ const Home: NextPage<any> = ({recentArticles}) => {
         <Work/>
         <About/>
         <RecentArticles recentArticles={recentArticles}/>
-        <div style={{"height":"100vh"}}></div>
+        <Contact/>
       </Nav>
     </>
   )

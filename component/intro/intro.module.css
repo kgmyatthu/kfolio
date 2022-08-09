@@ -64,16 +64,32 @@
 
 .pp-img{
 }
+.gradient{
+  display:none;
+}
 
 @media (max-width: 991.98px) {  
   .container{
     height:100vh;
     gap:0;
     flex-direction: column;
-    background-image: url('/profile.png');
+   /*  background-image: */
+   /* linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.9)), */
+   /*  url('/profile.png'); */
+    background: rgb(0,0,0);
+    background-image: 
+      linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7231267507002801) 16%, rgba(0,212,255,0) 100%),
+      url('/profile.png');
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
+
   }
+  /* .gradient{ */
+  /*   display:block; */
+  /*   width:100%; */
+  /*   min-height:100%; */
+  /*   z-index:1; */
+  /* } */
   .secondary-title{
     padding:0;
     display:block;

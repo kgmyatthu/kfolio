@@ -4,6 +4,7 @@
 }
 
 .nav{
+    z-index:900;
     width:5.5em;
    background-color:var(--color-blue); 
    display:flex;

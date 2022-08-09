@@ -9,6 +9,7 @@ import { useRef } from "react";
 const Intro: NextPage = () => {
   return (
       <div className={css(styles, "container")}>
+        <div className={styles.gradient}></div>
         <div className={css(styles,"child col-1st")}>
           <div className={styles.name}>
             <div>KAUNG<br/><span style={{color:'#8c52ff'}}>MYAT</span><br/>THU</div>
