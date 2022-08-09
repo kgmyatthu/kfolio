@@ -37,7 +37,7 @@
     "remark-heading-gap": "^5.0.1",
     "remark-math": "^5.1.1",
     "shelljs": "^0.8.5",
-    "three": "^0.121.0",
+    "three": "^0.125.0",
     "vanta": "^0.5.22"
   },
   "devDependencies": {
