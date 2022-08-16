@@ -24,7 +24,6 @@ import Link from 'next/link';
 import db from '../../../storage';
 
 const Article: NextPage<any> = ({slug, title, body, date, tags}) => { useEffect(() => {
-    console.log(tags)
     const els = Array.from(
       document.getElementsByClassName('icon-link')
     );

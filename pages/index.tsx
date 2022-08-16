@@ -13,6 +13,7 @@ import db from '../storage'
 import styles from './index.module.css'
 import RecentArticles from '../component/article/recentArticles.component';
 import Contact from '../component/contact/contact.component';
+import MetaConfig from '../component/meta/meta.component';
 
 const Home: NextPage<any> = ({recentArticles}) => {
   return (
@@ -22,6 +23,12 @@ const Home: NextPage<any> = ({recentArticles}) => {
           <title>Kaung Myat Thu | Portfolio </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
+        <MetaConfig
+          title="Kaung Myat Thu | Portfolio"
+          description='Kaung is a software engineer, specifically build things for the web.'
+          url="https://kaungmyatthu.dev"
+          imagePath='/'
+          />
         <Intro/>
         <Work/>
         <About/>
@@ -41,7 +48,10 @@ export default dynamic(() => Promise.resolve(Home), {
 
 export async function getStaticProps() {
     let articles = await db.article.findMany();
-    articles = articles.slice(-4);
+
+    if(articles.length > 4){
+      articles = articles.slice(-4);
+    }
 
 
     const recentArticles = []

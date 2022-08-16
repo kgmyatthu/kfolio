@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import styles from './contact.module.css';
 import { classNameHelper as css} from "../../utils/utils";
 import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { BsDot } from 'react-icons/bs';
 import { useEffect, useRef, useState } from 'react';
 import React from 'react';
 import * as THREE from "three";
@@ -47,7 +48,8 @@ const Contact: NextPage = () => {
       <div id="contact" ref={contactRef} className={css(styles, "container")}>
         <div className={styles.gradient}></div>
         <div className={styles.child}>
-            <h1 style={{fontStyle:"italic"}}>Keep In Touch</h1>
+              <h1 style={{fontStyle:"italic"}}>Keep In Touch</h1>
+
             <p> My inbox is always open, you can reach out to me for whether you have question or just want to say hi. </p>
             <span className={styles.icons} style={{margin:"0.5rem"}}>
               <a href="https://github.com/kgmyatthu" target="_blank" rel="noreferrer">
@@ -60,7 +62,7 @@ const Contact: NextPage = () => {
               </a>
             </span>
             <span className={styles.icons} style={{margin:"0.5rem"}}>
-              <a href="https://twitter.com/mgkaungmyatthu" target="_blank" rel="noreferrer">
+              <a href="https://twitter.com/kgmyatthu" target="_blank" rel="noreferrer">
                 <FaTwitter size={20}/>
               </a>
             </span>
@@ -69,7 +71,9 @@ const Contact: NextPage = () => {
                 <FaLinkedin size={20}/>
               </a>
             </span>
-            <p className={styles.mail}>kaung@shardus.com</p>
+            <p className={styles.mail}>
+                <a href="mailto:kaung@shardus.com">kaung@shardus.com</a> 
+            </p>
         </div>
       </div>
   )

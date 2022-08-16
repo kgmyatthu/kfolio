@@ -18,7 +18,7 @@ const Intro: NextPage = () => {
             </div>
             <ShadowButton
               content="Let's connect"
-              action=""
+              action="https://www.linkedin.com/in/kgmyatthu/"
               className={styles['btn']}/>
           </div>
         </div>  
