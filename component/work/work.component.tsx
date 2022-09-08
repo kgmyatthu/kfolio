@@ -45,18 +45,18 @@ const Work: NextPage = () => {
         </h1>
         <Timeline className={styles.timeline} data={jobs}/>
       </div>
-      <div className={css(styles,'child col-2nd')}>
-          <h1>"起死回生"</h1>
-          <Image 
-            loader={imgLoader} 
-            src={gif} 
-            alt="profile" 
-            className={styles.gif}
-            />
-      </div>
     </div>
   )
 }
 
+      // <div className={css(styles,'child col-2nd')}>
+      //     <h1>"起死回生"</h1>
+      //     <Image 
+      //       loader={imgLoader} 
+      //       src={gif} 
+      //       alt="profile" 
+      //       className={styles.gif}
+      //       />
+      // </div>
 export default Work
 

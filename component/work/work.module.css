@@ -6,11 +6,11 @@
   align-items: center;
   direction: row;
   width:100%;
-}
-.child{
-  width:50%;
   color:white;
 }
+/* .child{ */
+/*   width:50%; */
+/* } */
 
 .col-1st{
   text-align:center;
