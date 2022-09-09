@@ -4,13 +4,14 @@
   display:flex;
   margin:auto;
   align-items: center;
+  justify-content: center;
   direction: row;
   width:100%;
   color:white;
 }
-/* .child{ */
-/*   width:50%; */
-/* } */
+.child{
+  width:50%;
+}
 
 .col-1st{
   text-align:center;
