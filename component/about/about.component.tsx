@@ -12,13 +12,8 @@ const About: NextPage = () => {
             <span>Hi,</span>
             <div>
                 My name is Kaung Myatthu, (pronunced kow matthew). 
-                I'm a software engineer, specifically build things for web. 
-                I went to college to study computer science for three years and dropped out of it due to the political situation here in Myanmar. 
-                Now I'm in a team building a truly scalable decentralized technology protocol for the web. 
-                I like writing technical articles, playing video games and music in my spare time.
-                <br/>
-                I'm also unhealthly into watches, primarily mechanical watches. 
-                They're fascinating, such complex solutions to a seemingly simple task of telling time, Very similar to computer algorithms, doesn't it? . . .
+                I'm a software engineer, specifically build things for web, been doing that professional for 3years now.
+                Currently, i'm in a team building a truly scalable decentralized technology protocol for the web. 
             </div>
         </div>
       </div>
