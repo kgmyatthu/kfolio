@@ -29,6 +29,7 @@
     color:cyan;
 }
 .col-2nd{
+    
     width:45%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -99,9 +100,9 @@
     padding:0.5em;
     border-collapse: collapse;
 }
-.col-2nd [class*="math"]{
-    font-size:1.3em;
-}
+/* .col-2nd [class*="math"]{ */
+/*     font-size:98%; */
+/* } */
 .col-2nd [class*="icon-link"]{
     padding-right:0.3em;
     color:var(--color-cyan);
