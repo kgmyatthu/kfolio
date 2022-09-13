@@ -28,6 +28,9 @@ jobs:
     - name: Run tests
       run: npm run test
 
+    - name: check articles
+      run: ls articles -la
+
     - name: Prisma Generate
       run: npm run db:generate
 
