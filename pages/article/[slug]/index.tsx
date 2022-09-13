@@ -22,6 +22,8 @@ import TOC from '../../../component/toc/toc.compoment';
 import Tag from '../../../component/tag/tag.component';
 import Link from 'next/link';
 import db from '../../../storage';
+import MetaConfig from '../../../component/meta/meta.component';
+import Head from 'next/head';
 
 const Article: NextPage<any> = ({slug, title, body, date, tags}) => { useEffect(() => {
     const els = Array.from(
@@ -32,44 +34,56 @@ const Article: NextPage<any> = ({slug, title, body, date, tags}) => { useEffect(
     })
   }, []);
   return (
-    <div className={styles['container']}>
-      <div className={css(styles, 'child col-1st')}>
+    <>
+        <Head>
+          <title>{title.toUpperCase()}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+        <MetaConfig
+          title={title.toUpperCase()}
+          description={''}
+          url={`https://kaungmyatthu.dev/article/${slug}`}
+          imagePath='/profile.png'
+          />
+        <div className={styles['container']}>
+          <div className={css(styles, 'child col-1st')}>
 
-       <div> <Link href="/"><AiOutlineHome/></Link>        </div> 
-       <div> <Link href="/article"><RiArticleLine/></Link> </div> 
-       <div> <Link href="https://github.com/kgmyatthu"><AiFillGithub/></Link>  </div> 
-       <div> <Link href="https://github.com/kgmyatthu"><BiShare/></Link>  </div> 
-      </div>
-      <div className={css(styles, 'child col-2nd')}>
-        <h1 style={{textTransform: "uppercase"}}>{title}</h1>
-        <Tag tags={tags}/>
-        <br/>
-        <div className={styles['article-meta']}>  
-          {new Date(date)
-            .toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) } 
-          | {readingTime(body).text}
+           <div> <Link href="/"><AiOutlineHome/></Link>        </div> 
+           <div> <Link href="/article"><RiArticleLine/></Link> </div> 
+           <div> <Link href="https://github.com/kgmyatthu"><AiFillGithub/></Link>  </div> 
+           <div> <Link href="https://github.com/kgmyatthu"><BiShare/></Link>  </div> 
+          </div>
+          <div className={css(styles, 'child col-2nd')}>
+            <h1 style={{textTransform: "uppercase"}}>{title}</h1>
+            <Tag tags={tags}/>
+            <br/>
+            <div className={styles['article-meta']}>  
+              {new Date(date)
+                .toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) } 
+              | {readingTime(body).text}
+            </div>
+            <ReactMarkdown 
+              className={styles.body}
+              remarkPlugins={[remarkGfm, remarkMath, remarkHeadingGap]}
+              rehypePlugins={[
+                [rehypePrism, {showLineNumbers: true}], 
+                rehypeMathJaxSvg, 
+                rehypeSlug,
+                rehypeAutolinkHeadings
+                ]}>
+              {body}
+            </ReactMarkdown>
+          </div>
+          <div className={css(styles, 'child col-3rd')}>
+            <TOC
+              markdown={body}
+              hyperlink={true}
+              liClassName={styles["toc-li"]}
+              activeAnchorClassName="activeAnchor"
+            />
+          </div>
         </div>
-        <ReactMarkdown 
-          className={styles.body}
-          remarkPlugins={[remarkGfm, remarkMath, remarkHeadingGap]}
-          rehypePlugins={[
-            [rehypePrism, {showLineNumbers: true}], 
-            rehypeMathJaxSvg, 
-            rehypeSlug,
-            rehypeAutolinkHeadings
-            ]}>
-          {body}
-        </ReactMarkdown>
-      </div>
-      <div className={css(styles, 'child col-3rd')}>
-        <TOC
-          markdown={body}
-          hyperlink={true}
-          liClassName={styles["toc-li"]}
-          activeAnchorClassName="activeAnchor"
-        />
-      </div>
-    </div>
+    </>
   );
 }
 

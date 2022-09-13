@@ -1,6 +1,6 @@
 import { Article } from '@prisma/client'
 import dynamic from 'next/dynamic';
-import type { NextPage } from 'next'
+import type { NextPage } from 'next' 
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react'
@@ -27,7 +27,7 @@ const Home: NextPage<any> = ({recentArticles}) => {
           title="Kaung Myat Thu | Portfolio"
           description='Kaung is a software engineer, specifically build things for the web.'
           url="https://kaungmyatthu.dev"
-          imagePath='/'
+          imagePath='/profile.png'
           />
         <Intro/>
         <Work/>
