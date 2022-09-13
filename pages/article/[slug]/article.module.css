@@ -95,6 +95,9 @@
     border-bottom:1px solid rgba(255,255,255,.2); 
 }
 
+.col-2nd table{
+    margin:auto;
+}
 .col-2nd table, .col-2nd th, .col-2nd td{
     border:1px solid grey;
     padding:0.5em;
