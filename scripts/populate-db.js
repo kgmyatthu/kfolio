@@ -8,8 +8,12 @@ const populate = async () => {
   const prisma = new PrismaClient()
 
     const files = fs.readdirSync('articles');
-    
+    console.log(files); 
     for await( const filename of files){
+      if(filename === '.git' ||
+          filename === 'README.md' ||
+          filename === 'LICENSE') continue;
+
       if(filename!=='assets'){
         const slug = filename.replace('.md', '').replace(/_/g,'-')
         const raw = fs.readFileSync(`articles/${filename}`, 'utf-8');

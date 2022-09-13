@@ -41,6 +41,7 @@ const Article: NextPage<any> = ({slug, title, body, date, tags}) => { useEffect(
        <div> <Link href="https://github.com/kgmyatthu"><BiShare/></Link>  </div> 
       </div>
       <div className={css(styles, 'child col-2nd')}>
+        <h1 style={{textTransform: "uppercase"}}>{title}</h1>
         <Tag tags={tags}/>
         <br/>
         <div className={styles['article-meta']}>  
