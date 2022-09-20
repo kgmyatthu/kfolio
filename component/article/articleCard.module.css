@@ -17,7 +17,8 @@
 }
 .title{
     font-family: spacemonoBold;
-    font-size:110%;
+    text-transform: capitalize;
+    font-size:140%;
     height:150px;
     overflow: hidden;
 }
