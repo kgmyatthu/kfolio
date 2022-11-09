@@ -17,7 +17,7 @@
     "clean:db": "node ./scripts/clean-db.js"
   },
   "dependencies": {
-    "@prisma/client": "^3.15.2",
+    "@prisma/client": "^4.6.0",
     "@types/markdown-it": "^12.2.3",
     "@types/remark-prism": "^1.3.3",
     "classnames": "^2.3.1",
