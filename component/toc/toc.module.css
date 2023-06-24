@@ -1,9 +1,0 @@
-.toc-label{
-    display:flex;
-    vertical-align: bottom;
-    align-items:center;
-}
-
-.toc-label> span{
-    padding-left:1em;
-}
