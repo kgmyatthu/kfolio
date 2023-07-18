@@ -1,0 +1,23 @@
+.headTransition-enter {
+}
+.headTransition-enter-active {
+}
+.headTransition-exit {
+  opacity: 1;
+}
+.headTransition-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s;
+}
+
+.workTransition-exit {
+  opacity: 1;
+  margin: inherit;
+  background:black;
+}
+.workTransition-exit-active {
+  opacity: 0;
+  margin-right:-400rem;
+  transition: all 0.5s;
+}

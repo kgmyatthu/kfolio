@@ -1,0 +1,211 @@
+.container{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+
+
+    align-items:center;
+    justify-content: center;
+}
+
+.name{
+    z-index:2;
+    width:90%;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    letter-spacing:2rem;
+    font-family: 'Lato', sans-serif;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    animation: nameAnimate 1s ease-out;
+}
+.quote{
+    z-index:2;
+    max-width:100%;
+    text-align: left;
+    color: white;
+    font-family: 'Jomohari', serif;
+    letter-spacing:0.3rem;
+    padding-right: 22rem;
+    animation: quoteAnimate 1s ease-in;
+}
+.quote span{
+    font-size:0.8rem;
+}
+.occupation{
+    z-index:2;
+    padding-left: 22rem;
+    max-width:100%;
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.occupation span{
+    background: white;
+    color: black !important;
+    padding:0.4rem;
+    font-size: 0.9rem;
+    letter-spacing:0.3rem;
+    /* display:inline-block; */
+    animation: titleAnimate 2s ;
+    overflow: hidden;
+}
+.squareMask{
+    position: absolute;
+    margin-right: -20rem;
+    width:35rem;
+    height:35rem;
+    z-index:1;
+background: rgb(0,0,0);
+background: -moz-radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 90%);
+background: -webkit-radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 90%);
+background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 90%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+.square{
+    position: absolute;
+    margin-right: -20rem;
+    width:35rem;
+    height:35rem;
+    background: #0016ca;
+    z-index:1;
+    animation: square 1.5s ease-in;
+}
+.mouse{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:10px;
+    color:grey;
+    font-family: 'Jomohari', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.5rem;
+}
+.mouse svg{
+    animation: bounce  2.5s infinite ease-in;
+}
+
+@keyframes square{
+
+  from {
+    opacity: 0.1%;
+  }
+  to {
+    opacity: 100%;
+    }
+}
+
+@keyframes bounce{
+    0% {
+        padding:0rem;
+    }
+    50% {
+        padding:0.5rem;
+    }
+    100% {
+        padding:0rem;
+    }
+}
+@keyframes nameAnimate {
+  from {
+    letter-spacing: 2.5rem;
+    opacity: 0.1%;
+  }
+  to {
+    letter-spacing: 2rem;
+    opacity: 100%;
+    }
+}
+
+@keyframes titleAnimate {
+      0% {
+          width:0%;
+          height:0vh;
+          padding: 0rem;
+          opacity:0.1%;
+      }
+    50% {
+      width:100%;
+      height:0vh;
+        padding:0.4rem;
+    }
+    100%{
+        height:auto;
+        opacity:100%;
+    }
+
+}
+@keyframes quoteAnimate{
+    from{
+        color: transparent;
+        text-shadow: 0 0 10px #fff;
+    }
+    to{
+        color:white;
+        text-shadow: 0 0 0px transparent;
+    }
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .container{
+        overflow: hidden;
+    }
+    .name{
+        width:100%;
+        letter-spacing: 1rem;
+        font-size:2rem;
+    }
+    .occupation{
+        text-align: center;
+        width:100%;
+
+    }
+    .occupation span{
+        text-align: center;
+        padding:.5rem;
+        font-size: 0.6rem !important;
+    }
+    .quote{
+        text-align: center;
+        width:100%;
+        padding:1rem;
+    }
+    .quote span{
+        font-size:0.7rem;
+    }
+    .square{
+        left:-1rem;
+        top:-1rem;
+        width:110%;
+        height:110vh;
+    }
+    .squareMask{
+        display:none
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    .occupation{
+        padding:1rem;
+    }
+    .quote{
+        padding:1rem;
+    }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {  }
