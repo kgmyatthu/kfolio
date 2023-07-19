@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react-transition-group": "^4.4.6",
     "@types/three": "^0.154.0"
   }
