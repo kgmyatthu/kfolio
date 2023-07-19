@@ -7,7 +7,7 @@ import  { BsFillMouseFill } from 'react-icons/bs';
 import { SECTION } from '../../App';
 
 function Head({setSection}: any) {
-    const squareRef = useRef() as unknown as React.MutableRefObject<HTMLInputElement>;
+    const squareRef = useRef() as unknown as React.MutableRefObject<HTMLDivElement>;
     const maskRef = useRef() as unknown as React.MutableRefObject<HTMLInputElement>;
     const nameRef = useRef() as unknown as React.MutableRefObject<HTMLDivElement>;
     const occupationRef = useRef() as unknown as React.MutableRefObject<HTMLDivElement>;
@@ -58,9 +58,14 @@ function Head({setSection}: any) {
             try{
               if(vantaEffect)return
 
+              let canvas = squareRef.current
+              if(window.innerWidth < 767.98){
+                canvas = containerRef.current
+              }
+
               setVantaEffect(
                 FOG({
-                  el: squareRef.current,
+                  el: canvas,
                   THREE: THREE,
                   mouseControls:false ,
                   touchControls:false ,
@@ -75,19 +80,6 @@ function Head({setSection}: any) {
                   // baseColor: 0x14065f
                 })
               );
-              // squareRef.current.removeChild(squareRef.current.lastElementChild as any);
-              // setVantaEffect(TOPOLOGY({
-              //     el: squareRef.current,
-              //     mouseControls: false,
-              //     touchControls: false,
-              //     gyroControls: false,
-              //     minHeight: 50.00,
-              //     minWidth: 50.00,
-              //     scale: 0.50,
-              //     scaleMobile: 0.50,
-              //     color: 0x0,
-              //     backgroundColor: 0x16ca
-              //   }))
             }catch(e: any){
               console.error("Couldn't draw");
               console.error(e);
@@ -98,6 +90,24 @@ function Head({setSection}: any) {
           const squareTimeout = setTimeout(()=>{setShowSquare(true)}, 200); 
     containerRef.current.addEventListener('mousemove', mouseMoveHandler)
     containerRef.current.addEventListener('wheel', scrollHandler)
+    let touchstartX = 0
+    let touchendX = 0
+        
+    function checkDirection() {
+      if (touchendX < touchstartX && (Math.abs(touchendX-touchstartX) > 30)) { 
+        setSection(SECTION.about);
+      }
+      // if (touchendX > touchstartX) alert('swiped right!')
+    }
+
+    containerRef.current.addEventListener('touchstart', (e: TouchEvent) => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    containerRef.current.addEventListener('touchend', (e: TouchEvent) => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
       return () => {
         clearTimeout(squareTimeout);
         if (vantaEffect) vantaEffect.destroy()
