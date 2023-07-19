@@ -15,6 +15,23 @@ function About({setSection}: any) {
       }
       useEffect(()=>{
 
+        let touchstartX = 0
+        let touchendX = 0
+        function checkDirection() {
+          if (touchendX > touchstartX && (Math.abs(touchendX-touchstartX) > 30)) { 
+            setSection(SECTION.head);
+          }
+          // if (touchendX > touchstartX) alert('swiped right!')
+        }
+
+        containerRef.current.addEventListener('touchstart', (e: TouchEvent) => {
+          touchstartX = e.changedTouches[0].screenX
+        })
+
+        containerRef.current.addEventListener('touchend', (e: TouchEvent) => {
+          touchendX = e.changedTouches[0].screenX
+          checkDirection()
+        })
         containerRef.current.addEventListener('wheel', scrollHandler)
           return () => {
           }
