@@ -21,7 +21,7 @@ const experiences = [
     yearStart: 2020,
     yearEnd: 2022,
     link: "http://luupitsoluction.com",
-    description: "A compute and dynamically state sharded decentralized computer network protocol technology"
+    description: "Helping businesses succeed using technology"
   }
 ]
 const projects = [
