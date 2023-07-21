@@ -52,9 +52,12 @@ function About({setSection}: any) {
                 kaung@shardus.com 
             </div>
             <div className={styles.social}>
-                <FaGithubSquare size={25}/>
-                <FaLinkedin size={25}/>
-                <FaTwitterSquare size={25}/>
+                <FaGithubSquare size={25} 
+                  onClick={()=>{window.open("https://github.com/kgmyatthu", "_blank")}}/>
+                <FaLinkedin size={25}
+                  onClick={()=>{window.open("https://www.linkedin.com/in/kgmyatthu/", "_blank")}}/>
+                <FaTwitterSquare size={25}
+                  onClick={()=>{window.open("https://twitter.com/kgmyatthu", "_blank")}}/>
             </div>
         </div>
     </>
