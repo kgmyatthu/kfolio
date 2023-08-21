@@ -190,6 +190,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
     .mouse{
         display:none;
     }
+    @keyframes nameAnimate {
+      from {
+        letter-spacing: 2.5rem;
+        opacity: 0.1%;
+      }
+      to {
+        letter-spacing: 1rem;
+        opacity: 100%;
+        }
+    }
 }
 
 /* // Medium devices (tablets, less than 992px) */
