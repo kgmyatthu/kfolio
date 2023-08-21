@@ -23,7 +23,11 @@ function Nav({children, setShowWork, setSection, section}: any) {
   return (
     <div className={styles["container"]}>
         <div className={styles["nav"]}>
-            <div className={styles["nav-flex"]}> <a href="/" >GARDEN       </a> </div>
+            <div className={styles["nav-flex"]}> 
+                <a href="https://journals.kaungmyatthu.dev" >
+                    JOURNALS
+                </a> 
+            </div>
             <div className={styles["nav-flex"]} onClick={()=>{setShowWork(true)}}> <a href="#" >WORK</a> </div>
             <div className={[styles["nav-flex"], styles.banner].join(" ")}> 
                 <span>   KAUNG&nbsp;MYATTHU </span> 
