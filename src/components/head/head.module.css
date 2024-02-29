@@ -32,7 +32,7 @@
     animation: quoteAnimate 1s ease-in;
 }
 .quote span{
-    font-size:0.8rem;
+    font-size:0.95rem;
 }
 .occupation{
     z-index:2;

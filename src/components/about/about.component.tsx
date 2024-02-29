@@ -43,10 +43,10 @@ function About({setSection}: any) {
                 <img src="https://avatars.githubusercontent.com/u/24825299?v=4"></img>
             </div>
             <div className={styles.description}> 
-                I’m Kaung Myatthu or just Matthew as my international friends like to call it. I'm a software engineer based in Bangkok, Thailand. I build things for computers with computers. <br/>I work with golang, 
-                c/c++, nodejs, python or anything required to get the job done.
+                Name's Kaung or just Matthew as my international friends like to call it. I'm a software engineer based in Bangkok, Thailand. I build things for computers with computers. <br/>I work with golang, 
+                c/c++, nodejs, python, rust or anything really required to get the job done.
     <br/>
-                Currently working as blockchain protocol developer with shardus team to build shardeum network. 
+                Currently working as blockchain protocol developer with shardus team to build shardeum network.
             </div>
             <div className={styles.email}>
                 kaung@shardus.com 
