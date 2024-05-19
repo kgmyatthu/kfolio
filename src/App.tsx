@@ -9,6 +9,13 @@ import { CSSTransition, SwitchTransition, TransitionGroup } from 'react-transiti
 
 const experiences = [
   {
+    name: "Shardeum",
+    position: "Software Engineer",
+    yearStart: 2022,
+    description: "Horizontally scalable, low gas fees, EVM compatible, and decentralized layer 1 chain",
+    link: "https://shardeum.org",
+  },
+  {
     name: "Shardus",
     position: "Software Engineer",
     yearStart: 2022,
